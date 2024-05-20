@@ -15,11 +15,11 @@ export const compositionMook = () => {
 
 export const { userManagerProxy } = compositionMook();
 
-const registerMock = {
-    name: "Albano",
-    email: "Boschi.Albano.Jose@gmail.com",
-    password: "123456",
-};
+// const registerMock = {
+//     name: "Albano",
+//     email: "Boschi.Albano.Jose@gmail.com",
+//     password: "123456",
+// };
 
-userManagerProxy.getUser("Boschi.Albano.Jose@gmail.com");
-userManagerProxy.createUser(registerMock, registerMock.password);
+// userManagerProxy.getUser("Boschi.Albano.Jose@gmail.com");
+// userManagerProxy.createUser(registerMock);

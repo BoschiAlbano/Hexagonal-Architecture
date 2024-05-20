@@ -1,0 +1,5 @@
+CLIENT:
+PS C:\Users\Albano\Desktop\Arquitecturas de Software\Hexagonal-Architecture> yarn dev
+
+SERVER:
+PS C:\Users\Albano\Desktop\Arquitecturas de Software\Hexagonal-Architecture\src\services\dashboard-api> tsx server.ts
