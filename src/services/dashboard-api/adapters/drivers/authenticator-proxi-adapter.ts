@@ -10,7 +10,7 @@ export class AuthenticatorProxiAdapter implements ForAuthenticating {
     async login(email: string, password: string): Promise<AuthenticatedUser> {
         return this.dashboardApi.login(email, password);
     }
-    register(user: User): Promise<AuthenticatedUser> {
+    async register(user: User): Promise<AuthenticatedUser> {
         return this.dashboardApi.register(user);
     }
 }

@@ -3,9 +3,13 @@ import { UserManagerProxy } from "../adapters/drivers";
 import { Repository } from "./repository";
 
 export const compositionMook = () => {
+    // DRIVEN
     const monitorStub = new LoggerStubAdapter();
+
+    // APP
     const repositoryMock = new Repository(monitorStub);
 
+    // DRIVER
     const userManagerProxy = new UserManagerProxy(repositoryMock);
 
     return {

@@ -1,33 +1,33 @@
 import { initTRPC } from "@trpc/server";
 import { ControlAuthenticatorStub } from "../adapters/drivens/control-authenticator-stub-adapter";
-import { RepoQuerieStub } from "../adapters/drivens/repo-querier-stub-adapter";
+// import { RepoQuerieStub } from "../adapters/drivens/repo-querier-stub-adapter";
 import { RepoQuerieLocalAdapter } from "../adapters/drivens";
 import {
-    AuthenticatorProxiAdapter,
+    // AuthenticatorProxiAdapter,
     authTRPCAdapter,
 } from "../adapters/drivers";
 import { DashboardApi } from "./dashboard-api";
 // import { User } from "./schemas";
 
-const compositionMock = () => {
-    const controlAuthenticatorStub = new ControlAuthenticatorStub();
-    const repoQuerieStub = new RepoQuerieStub();
+// const compositionMock = () => {
+//     const controlAuthenticatorStub = new ControlAuthenticatorStub();
+//     const repoQuerieStub = new RepoQuerieStub();
 
-    const dashboardApiMock = new DashboardApi(
-        controlAuthenticatorStub,
-        repoQuerieStub
-    );
+//     const dashboardApiMock = new DashboardApi(
+//         controlAuthenticatorStub,
+//         repoQuerieStub
+//     );
 
-    const authenticatorProxiAdapter = new AuthenticatorProxiAdapter(
-        dashboardApiMock
-    );
+//     const authenticatorProxiAdapter = new AuthenticatorProxiAdapter(
+//         dashboardApiMock
+//     );
 
-    return {
-        authenticatorProxiAdapter,
-    };
-};
+//     return {
+//         authenticatorProxiAdapter,
+//     };
+// };
 
-export const { authenticatorProxiAdapter } = compositionMock();
+// export const { authenticatorProxiAdapter } = compositionMock();
 
 // const registerMock: User = {
 //     name: "Leandro",
